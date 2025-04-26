@@ -8,7 +8,19 @@
 </head>
 <body>
 
-<div class="slider">
+<!-- Barra de navegación -->
+<nav>
+  <ul>
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#productos">Productos</a></li>
+    <li><a href="#contacto">Contáctenos</a></li>
+  </ul>
+</nav>
+
+<!-- Carrusel de imágenes -->
+<div class="slider" id="inicio">
   <div class="slides">
     <img src="image (1).png" alt="Panel solar en campo abierto">
     <img src="image (2).png" alt="Casa con paneles solares">
@@ -34,9 +46,14 @@
   </ul>
 </section>
 
-<section id="proyectos">
-  <h2>Proyectos</h2>
-  <p>Hemos transformado más de 200 hogares y empresas con energía solar confiable y sostenible.</p>
+<section id="productos">
+  <h2>Productos</h2>
+  <ul>
+    <li>Paneles solares fotovoltaicos</li>
+    <li>Inversores solares</li>
+    <li>Controladores de carga</li>
+    <li>Baterías solares de respaldo</li>
+  </ul>
 </section>
 
 <section id="contacto">
@@ -57,11 +74,11 @@
     slideIndex = (slideIndex + 1) % totalSlides;
   }
 
-  // Mostrar la primera imagen al cargar
+  // Mostrar la primera imagen
   showSlides();
 
-  // Cambiar cada 8 segundos
-  setInterval(showSlides, 8000);
+  // Cambiar cada 5 segundos
+  setInterval(showSlides, 5000);
 </script>
 
 </body>
