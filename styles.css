@@ -100,6 +100,29 @@ nav ul li a:hover {
 .nosotros-texto h2 {
   color: #0288d1;
 }
+.seccion-doble {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  min-height: 300px;
+}
+
+.nosotros-imagen {
+  flex: 1;
+  min-width: 300px;
+}
+
+.nosotros-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nosotros-texto {
+  flex: 1;
+  padding: 40px;
+  text-align: left;
+}
 
 section:not(.seccion-doble) {
   padding: 40px 20px;
