@@ -55,8 +55,9 @@
     if (slideIndex >= totalSlides) slideIndex = 0;
     slides.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
   }
+  setInterval(showSlides, 8000);
 
-  setInterval(showSlides, 5000);
+
 </script>
 
 </body>
