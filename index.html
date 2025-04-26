@@ -46,19 +46,22 @@
 </section>
 
 <script>
+  <script>
   let slideIndex = 0;
   const slides = document.querySelector('.slides');
   const totalSlides = slides.children.length;
 
   function showSlides() {
-    slideIndex++;
-    if (slideIndex >= totalSlides) slideIndex = 0;
     slides.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
+    slideIndex = (slideIndex + 1) % totalSlides;
   }
+
+  // Mostrar la primera imagen de inmediato
+  showSlides();
+
+  // Ejecutar transición cada 8 segundos
   setInterval(showSlides, 8000);
 
-
-</script>
 
 </body>
 </html>
