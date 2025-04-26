@@ -153,3 +153,41 @@ ul li::before {
   width: 60px;
   height: 60px;
 }
+
+/* Chat emergente flotante */
+.chat-emergente {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  font-size: 14px;
+  z-index: 1000;
+  max-width: 250px;
+}
+
+.chat-emergente p {
+  margin: 0;
+}
+
+.boton-chat {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: white;
+  color: #25D366;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cerrar-chat {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  cursor: pointer;
+  font-size: 18px;
+}

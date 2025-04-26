@@ -65,24 +65,36 @@
   <p>WhatsApp: 6343479317</p>
 </section>
 
+<!-- Botón flotante WhatsApp -->
 <a href="https://wa.me/6343479317" class="whatsapp-float" target="_blank">
   <img src="whatsapp-icon.png" alt="WhatsApp Solarissa">
 </a>
 
+<!-- Chat emergente -->
+<div class="chat-emergente" id="chatEmergente">
+  <p>¿Necesitas ayuda? <br><strong>Chatea con nosotros</strong></p>
+  <a href="https://wa.me/6343479317" target="_blank" class="boton-chat">Abrir WhatsApp</a>
+  <span class="cerrar-chat" onclick="cerrarChat()">×</span>
+</div>
+
 <script>
-  let slideIndex = 0;
-  const slides = document.querySelectorAll('.slides img');
-  const totalSlides = slides.length;
+function cerrarChat() {
+  document.getElementById('chatEmergente').style.display = 'none';
+}
 
-  function showSlides() {
-    slides.forEach((slide, i) => {
-      slide.style.display = (i === slideIndex) ? 'block' : 'none';
-    });
-    slideIndex = (slideIndex + 1) % totalSlides;
-  }
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slides img');
+const totalSlides = slides.length;
 
-  showSlides();
-  setInterval(showSlides, 5000);
+function showSlides() {
+  slides.forEach((slide, i) => {
+    slide.style.display = (i === slideIndex) ? 'block' : 'none';
+  });
+  slideIndex = (slideIndex + 1) % totalSlides;
+}
+
+showSlides();
+setInterval(showSlides, 5000);
 </script>
 
 </body>
