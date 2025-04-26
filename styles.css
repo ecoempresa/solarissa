@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  background: white;
   color: #333;
 }
 
@@ -75,9 +75,11 @@ nav ul li a:hover {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  background: white;
   margin: 20px auto;
   width: 90%;
   max-width: 1000px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   border-radius: 8px;
   overflow: hidden;
 }
@@ -87,36 +89,37 @@ nav ul li a:hover {
   min-width: 300px;
   padding: 20px;
   text-align: center;
-  background: black;
 }
 
 .nosotros-imagen img {
-  width: 80%;
+  width: 100%;
   height: auto;
-  max-width: 300px;
 }
 
 .nosotros-texto {
   flex: 1;
   padding: 40px;
-  text-align: left;
+  text-align: center;
 }
 
-section.oscura {
-  background-color: black;
-  color: white;
+.logo-solarissa {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+section {
   padding: 40px 20px;
+  background: white;
   margin: 20px auto;
   width: 90%;
   max-width: 1000px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(255,255,255,0.05);
 }
 
-.nosotros-texto h2,
-section.oscura h2 {
+section h2 {
   text-align: center;
-  color: #4fc3f7;
+  color: #0288d1;
 }
 
 ul {
@@ -136,7 +139,7 @@ ul li::before {
   left: 0;
 }
 
-/* WhatsApp Botón Flotante */
+/* WhatsApp flotante */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
