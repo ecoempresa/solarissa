@@ -46,7 +46,6 @@
 </section>
 
 <script>
-  <script>
   let slideIndex = 0;
   const slides = document.querySelector('.slides');
   const totalSlides = slides.children.length;
@@ -56,12 +55,12 @@
     slideIndex = (slideIndex + 1) % totalSlides;
   }
 
-  // Mostrar la primera imagen de inmediato
+  // Mostrar primera imagen
   showSlides();
 
-  // Ejecutar transición cada 8 segundos
+  // Cambiar cada 8 segundos
   setInterval(showSlides, 8000);
-
+</script>
 
 </body>
 </html>
