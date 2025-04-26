@@ -75,11 +75,9 @@ nav ul li a:hover {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background: white;
   margin: 20px auto;
   width: 90%;
   max-width: 1000px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   border-radius: 8px;
   overflow: hidden;
 }
@@ -89,6 +87,7 @@ nav ul li a:hover {
   min-width: 300px;
   padding: 20px;
   text-align: center;
+  background: black;
 }
 
 .nosotros-imagen img {
@@ -103,23 +102,21 @@ nav ul li a:hover {
   text-align: left;
 }
 
-.nosotros-texto h2 {
-  color: #0288d1;
-}
-
-section:not(.seccion-doble) {
+section.oscura {
+  background-color: black;
+  color: white;
   padding: 40px 20px;
-  background: white;
   margin: 20px auto;
   width: 90%;
   max-width: 1000px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.05);
 }
 
-section h2 {
+.nosotros-texto h2,
+section.oscura h2 {
   text-align: center;
-  color: #0288d1;
+  color: #4fc3f7;
 }
 
 ul {
