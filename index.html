@@ -44,23 +44,25 @@
   <p>Email: contacto@solarissa.com</p>
   <p>WhatsApp: +123456789</p>
 </section>
-
-<script>
+  
+  <script>
   let slideIndex = 0;
-  const slides = document.querySelector('.slides');
-  const totalSlides = slides.children.length;
+  const slides = document.querySelectorAll('.slides img');
+  const totalSlides = slides.length;
 
   function showSlides() {
-    slides.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
+    slides.forEach((slide, i) => {
+      slide.style.display = (i === slideIndex) ? 'block' : 'none';
+    });
     slideIndex = (slideIndex + 1) % totalSlides;
   }
 
-  // Mostrar primera imagen
+  // Mostrar la primera imagen al cargar
   showSlides();
 
-  // Cambiar cada 8 segundos
-  setInterval(showSlides, 8000);
-</script>
+  // Cambiar cada 5 segundos
+  setInterval(showSlides, 5000);
+
 
 </body>
 </html>
