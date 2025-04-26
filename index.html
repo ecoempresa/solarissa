@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solarissa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="slider">
+  <div class="slides">
+    <img src="image (1).png" alt="Panel solar en campo abierto">
+    <img src="image (2).png" alt="Casa con paneles solares">
+    <img src="image (3).png" alt="Tejado solar moderno">
+  </div>
+  <div class="slider-texto">
+    Energía solar para un futuro sostenible
+  </div>
+</div>
+
+<section id="nosotros">
+  <h2>Sobre Solarissa</h2>
+  <p>En Solarissa ofrecemos soluciones de energía solar innovadoras para hogares y empresas, promoviendo un futuro más limpio y eficiente.</p>
+</section>
+
+<section id="servicios">
+  <h2>Servicios</h2>
+  <ul>
+    <li>Instalación de paneles solares</li>
+    <li>Venta de equipos solares</li>
+    <li>Asesoramiento energético</li>
+    <li>Mantenimiento de sistemas solares</li>
+  </ul>
+</section>
+
+<section id="proyectos">
+  <h2>Proyectos</h2>
+  <p>Hemos transformado más de 200 hogares y empresas con energía solar confiable y sostenible.</p>
+</section>
+
+<section id="contacto">
+  <h2>Contáctanos</h2>
+  <p>Email: contacto@solarissa.com</p>
+  <p>WhatsApp: +123456789</p>
+</section>
+
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelector('.slides');
+  const totalSlides = slides.children.length;
+
+  function showSlides() {
+    slideIndex++;
+    if (slideIndex >= totalSlides) slideIndex = 0;
+    slides.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
+  }
+
+  setInterval(showSlides, 5000);
+</script>
+
+</body>
+</html>
