@@ -167,6 +167,8 @@ ul li::before {
   font-size: 14px;
   z-index: 1000;
   max-width: 250px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 .chat-emergente p {
@@ -190,4 +192,8 @@ ul li::before {
   right: 8px;
   cursor: pointer;
   font-size: 18px;
+}
+
+.chat-visible {
+  opacity: 1;
 }

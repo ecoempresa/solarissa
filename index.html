@@ -95,6 +95,11 @@ function showSlides() {
 
 showSlides();
 setInterval(showSlides, 5000);
+
+// Animación de aparición del chat
+setTimeout(() => {
+  document.getElementById('chatEmergente').classList.add('chat-visible');
+}, 3000);
 </script>
 
 </body>
