@@ -96,10 +96,16 @@ function showSlides() {
 showSlides();
 setInterval(showSlides, 5000);
 
-// Animación de aparición del chat
-setTimeout(() => {
-  document.getElementById('chatEmergente').classList.add('chat-visible');
-}, 3000);
+// Animación de aparición del chat corregida
+window.onload = function() {
+  setTimeout(() => {
+    const chat = document.getElementById('chatEmergente');
+    chat.style.display = 'block';
+    setTimeout(() => {
+      chat.classList.add('chat-visible');
+    }, 100);
+  }, 3000);
+}
 </script>
 
 </body>
