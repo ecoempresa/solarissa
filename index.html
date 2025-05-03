@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+<script src="script.js"></script>
 <nav>
   <ul>
     <li><a href="#inicio">Inicio</a></li>
@@ -20,9 +20,9 @@
 
 <div class="slider" id="inicio">
   <div class="slides">
-    <img src="image (1).png" alt="Panel solar en campo abierto">
-    <img src="image (2).png" alt="Casa con paneles solares">
-    <img src="image (3).png" alt="Tejado solar moderno">
+    <img src="image1.jpg" alt="Panel solar en campo abierto">
+    <img src="image2.jpg" alt="Casa con paneles solares">
+    <img src="image3.jpg" alt="Tejado solar moderno">
   </div>
   <div class="slider-texto">
     Energía solar para un futuro sostenible
@@ -65,18 +65,22 @@
   <p>WhatsApp: 6343479317</p>
 </section>
 
-<!-- Botón flotante WhatsApp -->
-<a href="https://wa.me/6343479317" class="whatsapp-float" target="_blank">
-  <img src="whatsapp-icon.png" alt="WhatsApp Solarissa">
-</a>
-
-<!-- Chat emergente -->
-<div class="chat-emergente" id="chatEmergente">
-  <p>¿Necesitas ayuda? <br><strong>Chatea con nosotros</strong></p>
-  <a href="https://wa.me/6343479317" target="_blank" class="boton-chat">Abrir WhatsApp</a>
-  <span class="cerrar-chat" onclick="cerrarChat()">×</span>
+<!-- Botón flotante de chat -->
+<div class="chat-toggle" id="chatToggle" onclick="toggleChat()">
+  <img src="chat-icon.png" alt="Chat Solarissa">
 </div>
 
+<!-- Chat desplegable -->
+<div class="chat-box" id="chatBox">
+  <div class="chat-header">
+    <p>¿Necesitas ayuda? <strong>Chatea con nosotros</strong></p>
+    <span class="cerrar-chat" onclick="toggleChat()">×</span>
+  </div>
+  <div class="chat-body">
+    <p>Hola, ¿en qué podemos ayudarte?</p>
+    <a href="https://wa.me/6343479317" target="_blank" class="boton-chat">Abrir WhatsApp</a>
+  </div>
+</div>
 <script>
 function cerrarChat() {
   document.getElementById('chatEmergente').style.display = 'none';

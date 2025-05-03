@@ -39,7 +39,7 @@ nav ul li a:hover {
 .slider {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 400px;
   overflow: hidden;
   margin-bottom: 60px;
 }
@@ -55,7 +55,7 @@ nav ul li a:hover {
   top: 0;
   left: 0;
   width: 100%;
-  height: 300px;
+  height: 400px;
   object-fit: cover;
   display: none;
 }
@@ -198,3 +198,76 @@ ul li::before {
 .chat-visible {
   opacity: 1;
 }
+/* Botón flotante de chat */
+.chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.chat-toggle img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Chat desplegable */
+.chat-box {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.chat-box.chat-visible {
+  display: flex;
+}
+
+.chat-header {
+  background-color: #25d366;
+  color: #fff;
+  padding: 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header .cerrar-chat {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.chat-body {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.boton-chat {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #25d366;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
