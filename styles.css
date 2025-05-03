@@ -1,24 +1,24 @@
-
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
+  font-family: Arial, sans-serif;
   background: white;
   color: #333;
 }
 
 nav {
   background-color: black;
-  padding: 15px 0;
+  padding: 20px 0;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 nav ul li {
@@ -29,15 +29,31 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
 }
 
 .slider {
   position: relative;
+  width: 100%;
   height: 300px;
   overflow: hidden;
+  margin-bottom: 60px;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .slides img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 300px;
   object-fit: cover;
@@ -49,40 +65,136 @@ nav ul li a {
   top: 40%;
   width: 100%;
   text-align: center;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
   color: white;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
 .seccion-doble {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1000px;
-  margin: 40px auto;
+  align-items: center;
   background: white;
-  border-radius: 8px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1000px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
   overflow: hidden;
 }
 
-.nosotros-imagen, .nosotros-texto {
+.nosotros-imagen {
   flex: 1;
+  min-width: 300px;
   padding: 20px;
   text-align: center;
 }
 
 .nosotros-imagen img {
   width: 100%;
-  max-width: 400px;
+  height: auto;
+}
+
+.nosotros-texto {
+  flex: 1;
+  padding: 40px;
+  text-align: center;
 }
 
 .logo-solarissa {
-  width: 200px;
-  margin-bottom: 20px;
+  width: 250px;
+  max-width: 100%;
+  margin: 20px auto;
+  display: block;
 }
 
 section {
-  padding: 20px;
+  padding: 40px 20px;
+  background: white;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+section h2 {
   text-align: center;
+  color: #0288d1;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+ul li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+}
+
+/* WhatsApp flotante */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Chat emergente flotante */
+.chat-emergente {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  font-size: 14px;
+  z-index: 1000;
+  max-width: 250px;
+  opacity: 0;
+  display: none;
+  transition: opacity 1s ease-in-out;
+}
+
+.chat-emergente p {
+  margin: 0;
+}
+
+.boton-chat {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: white;
+  color: #25D366;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cerrar-chat {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.chat-visible {
+  opacity: 1;
 }
