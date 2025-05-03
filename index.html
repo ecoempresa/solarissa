@@ -14,15 +14,16 @@
     <li><a href="#nosotros">Nosotros</a></li>
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#productos">Productos</a></li>
+    <li><a href="#asesoria">Asesoría</a></li>
     <li><a href="#contacto">Contáctenos</a></li>
   </ul>
 </nav>
 
 <div class="slider" id="inicio">
   <div class="slides">
-    <img src="image (1).png" alt="Panel solar en campo abierto">
-    <img src="image (2).png" alt="Casa con paneles solares">
-    <img src="image (3).png" alt="Tejado solar moderno">
+    <img src="image1.png" alt="Panel solar en campo abierto">
+    <img src="image2.png" alt="Casa con paneles solares">
+    <img src="image3.png" alt="Tejado solar moderno">
   </div>
   <div class="slider-texto">
     Energía solar para un futuro sostenible
@@ -31,7 +32,7 @@
 
 <section id="nosotros" class="seccion-doble">
   <div class="nosotros-imagen">
-    <img src="image (4).png" alt="Imagen de Solarissa">
+    <img src="image4.png" alt="Imagen de Solarissa">
   </div>
   <div class="nosotros-texto">
     <img src="solarissa-logo2.png" alt="Logo Solarissa" class="logo-solarissa">
@@ -39,24 +40,18 @@
   </div>
 </section>
 
-<section id="servicios">
-  <h2>Servicios</h2>
-  <ul>
-    <li>Instalación de paneles solares</li>
-    <li>Venta de equipos solares</li>
-    <li>Asesoramiento energético</li>
-    <li>Mantenimiento de sistemas solares</li>
-  </ul>
-</section>
-
-<section id="productos">
-  <h2>Productos</h2>
-  <ul>
-    <li>Paneles solares fotovoltaicos</li>
-    <li>Inversores solares</li>
-    <li>Controladores de carga</li>
-    <li>Baterías solares de respaldo</li>
-  </ul>
+<section id="asesoria">
+  <h2>Asesoría Técnica Personalizada</h2>
+  <div class="seccion-doble">
+    <div class="nosotros-imagen">
+      <img src="image3.png" alt="Asesoría técnica">
+    </div>
+    <div class="nosotros-texto">
+      <p>En <strong>Solarissa</strong> ofrecemos asesoría técnica especializada para analizar el consumo energético actual de tu hogar o empresa. Nuestro equipo evalúa tus necesidades reales, identifica los principales puntos de consumo y te presenta un <strong>comparativo detallado</strong> entre tu situación actual y el ahorro potencial al implementar soluciones solares.</p>
+      <p>Te guiamos paso a paso para que comprendas el impacto de tus hábitos de consumo, los beneficios económicos a corto y largo plazo, y cómo elegir la tecnología solar más adecuada para ti. Nuestra asesoría es <strong>personalizada, clara y orientada a resultados reales</strong>.</p>
+      <p>Invertir en energía solar no solo es una decisión ecológica, sino también <strong>una estrategia inteligente de ahorro</strong>. Con Solarissa, tendrás el respaldo técnico necesario para tomar decisiones informadas y confiables.</p>
+    </div>
+  </div>
 </section>
 
 <section id="contacto">
@@ -64,49 +59,6 @@
   <p>Email: contacto@solarissa.com</p>
   <p>WhatsApp: 6343479317</p>
 </section>
-
-<!-- Botón flotante WhatsApp -->
-<a href="https://wa.me/6343479317" class="whatsapp-float" target="_blank">
-  <img src="whatsapp-icon.png" alt="WhatsApp Solarissa">
-</a>
-
-<!-- Chat emergente -->
-<div class="chat-emergente" id="chatEmergente">
-  <p>¿Necesitas ayuda? <br><strong>Chatea con nosotros</strong></p>
-  <a href="https://wa.me/6343479317" target="_blank" class="boton-chat">Abrir WhatsApp</a>
-  <span class="cerrar-chat" onclick="cerrarChat()">×</span>
-</div>
-
-<script>
-function cerrarChat() {
-  document.getElementById('chatEmergente').style.display = 'none';
-}
-
-let slideIndex = 0;
-const slides = document.querySelectorAll('.slides img');
-const totalSlides = slides.length;
-
-function showSlides() {
-  slides.forEach((slide, i) => {
-    slide.style.display = (i === slideIndex) ? 'block' : 'none';
-  });
-  slideIndex = (slideIndex + 1) % totalSlides;
-}
-
-showSlides();
-setInterval(showSlides, 5000);
-
-// Animación de aparición del chat corregida
-window.onload = function() {
-  setTimeout(() => {
-    const chat = document.getElementById('chatEmergente');
-    chat.style.display = 'block';
-    setTimeout(() => {
-      chat.classList.add('chat-visible');
-    }, 100);
-  }, 3000);
-}
-</script>
 
 </body>
 </html>
