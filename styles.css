@@ -11,15 +11,12 @@ nav {
   padding: 15px 0;
   position: sticky;
   top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  align-items: center;
+  justify-content: center;
   padding: 0;
   margin: 0;
 }
@@ -34,18 +31,58 @@ nav ul li a {
   font-weight: bold;
 }
 
-.logo-nav {
-  height: 40px; /* Tamaño ajustado */
-  margin-right: 15px;
-  vertical-align: middle;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+.slider {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
 }
 
-.logo-nav:hover {
-  transform: scale(1.05);
-  opacity: 0.8;
+.slides img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: none;
 }
 
-.logo-li {
-  margin-right: auto;
+.slider-texto {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.seccion-doble {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.nosotros-imagen, .nosotros-texto {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.nosotros-imagen img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.logo-solarissa {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+section {
+  padding: 20px;
+  text-align: center;
 }
