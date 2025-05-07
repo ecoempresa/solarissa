@@ -35,7 +35,7 @@ nav ul li a {
 }
 
 .logo-nav {
-  height: 50px;
+  height: 40px; /* Tamaño ajustado */
   margin-right: 15px;
   vertical-align: middle;
   transition: transform 0.3s ease, opacity 0.3s ease;
