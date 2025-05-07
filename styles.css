@@ -81,7 +81,10 @@ width: 30px;
   width: 200px;
   margin-bottom: 20px;
 }
-
+.nosotros-imagen {
+ height: 20px;
+width: 30px;
+}
 section {
   padding: 20px;
   text-align: center;
