@@ -7,21 +7,125 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+<script src="script.js"></script>
 <nav>
   <ul>
-    <li class="logo-li"><a href="#inicio"><img src="2.png" alt="Solarissa" class="logo-nav"></a></li>
+
+    <li><a href="#inicio">Inicio</a></li>
     <li><a href="#nosotros">Nosotros</a></li>
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#productos">Productos</a></li>
-    <li><a href="#asesoria">Asesoría</a></li>
     <li><a href="#contacto">Contáctenos</a></li>
   </ul>
 </nav>
+<!--anuncio emergente-->
+<div class="anuncio-overlay" id="anuncioOverlay" style="display: none;">
+  <div class="anuncio-sticky animated" id="anuncioSticky">
+    <button class="cerrar-anuncio" onclick="cerrarAnuncio()">×</button>
+  </div>
+</div>
+<!--fin anuncio emergente-->
 
-<section id="inicio">
-  <h1>Bienvenido a Solarissa</h1>
+<div class="slider" id="inicio">
+  <div class="slides">
+    <img src="image1.jpg" alt="Panel solar en campo abierto">
+    <img src="image2.jpg" alt="Casa con paneles solares">
+    <img src="image3.jpg" alt="Tejado solar moderno">
+  </div>
+  <div class="slider-texto">
+    Energía solar para un futuro sostenible
+  </div>
+</div>
+
+<section id="nosotros" class="seccion-doble">
+  <div class="nosotros-imagen">
+    <img src="image (4).png" alt="Imagen de Solarissa">
+  </div>
+  <div class="nosotros-texto">
+    <img src="LogoSolarissa.png" alt="Logo Solarissa" class="logo-solarissa">
+    <p>En Solarissa ofrecemos soluciones de energía solar innovadoras para hogares y empresas, promoviendo un futuro más limpio y eficiente. Nos enfocamos no solo en cuidar el medio ambiente, sino también en proteger la economía de nuestros clientes, ofreciendo sistemas que reducen costos energéticos y representan una inversión inteligente a largo plazo.</p>
+  </div>
 </section>
+
+<section id="servicios">
+  <h2>Servicios</h2>
+  <ul>
+    <li>Instalación de paneles solares</li>
+    <li>Venta de equipos solares</li>
+    <li>Asesoramiento energético</li>
+    <li>Mantenimiento de sistemas solares</li>
+  </ul>
+</section>
+
+<section id="productos">
+  <h2>Productos</h2>
+  <ul>
+    <li>Paneles solares fotovoltaicos</li>
+    <li>Inversores solares</li>
+    <li>Controladores de carga</li>
+    <li>Baterías solares de respaldo</li>
+  </ul>
+</section>
+
+<section id="contacto">
+  <h2>Contáctanos</h2>
+  <p>Email: contacto@solarissa.com</p>
+  <p>WhatsApp: 6343479317</p>
+</section>
+
+<!-- Botón flotante de chat -->
+<div class="chat-toggle" id="chatToggle" onclick="toggleChat()">
+  <img src="chat-icon.png" alt="Chat Solarissa">
+</div>
+
+<!-- Chat desplegable -->
+<div class="chat-box" id="chatBox">
+  <div class="chat-header">
+    <p>¿Necesitas ayuda? <strong>Chatea con nosotros</strong></p>
+    <span class="cerrar-chat" onclick="toggleChat()">×</span>
+  </div>
+  <div class="chat-body">
+    <p>Hola, ¿en qué podemos ayudarte?</p>
+    <a href="https://wa.me/6343479317" target="_blank" class="boton-chat">Abrir WhatsApp</a>
+  </div>
+</div>
+<script>
+function cerrarChat() {
+  document.getElementById('chatEmergente').style.display = 'none';
+}
+
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slides img');
+const totalSlides = slides.length;
+
+function showSlides() {
+  slides.forEach((slide, i) => {
+    slide.style.display = (i === slideIndex) ? 'block' : 'none';
+  });
+  slideIndex = (slideIndex + 1) % totalSlides;
+}
+
+showSlides();
+setInterval(showSlides, 5000);
+
+// Animación de aparición del chat corregida
+window.onload = function() {
+  setTimeout(() => {
+    const chat = document.getElementById('chatEmergente');
+    chat.style.display = 'block';
+    setTimeout(() => {
+      chat.classList.add('chat-visible');
+    }, 100);
+  }, 3000);
+}
+// Mostrar el anuncio sticky después de 1 segundo
+window.onload = function() {
+  setTimeout(() => {
+      const overlay = document.getElementById('anuncioOverlay');
+      overlay.style.display = 'flex'; // Asegúrate de que el contenedor sea visible
+  }, 3000); // 1 segundo
+};
+</script>
 
 </body>
 </html>
